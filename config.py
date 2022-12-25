@@ -1,6 +1,6 @@
-customhost = "database-1.c79pgmyzgdsd.us-east-1.rds.amazonaws.com"
+customhost = "database.c79pgmyzgdsd.us-east-1.rds.amazonaws.com"
 customuser = "admin"
 custompass = "zhengyu2000"
-customdb = "database-1"
+customdb = "Employee"
 custombucket = "tanjiapei-bucket"
 customregion = "us-east-1b"
