@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
+	<style>
+		.button {
+		  background-color: #4676c4;
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  transition-duration: 0.4s;
+		}
+		
+		.button:hover {
+		  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+			</style>
 <head>
 	<title>Employee Information</title>
 </head>
 <center>
-	<font color="black" size="5" style="font-family: avenir">
+	<font color="black" size="5" style="font-family: Arial, Helvetica, sans-serif;">
 
-		<h1 style="color: DodgerBlue">Employee Information</h1>
+		<h1 style="color: rgb(0, 128, 255)">Employee Information</h1>
 
-		<body bgcolor="lightgrey">
+		<body bgcolor="white">
 
 			<form>
 
@@ -26,7 +45,7 @@
 
 			  		Image URL: <br> {{ image_url }} <br><br>
 
-			  		<button type="submit" style="background: grey; height: 45px; width: 200px; color:white; font:oblique;" formaction="http://3.134.115.108:80/getemp">RESET</button><br><br>
+			  		<button class="button" type="submit" style="background: rgb(255, 0, 0); height: 45px; width: 200px; color:white; font:oblique;" formaction="http://3.134.115.108:80/getemp">RESET</button><br><br>
 
 			  	</div>
 
