@@ -1,16 +1,35 @@
 <!DOCTYPE html>
+<style>
+.button {
+  background-color: #4676c4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+	</style>
 <html>
 <head>
 <center>
-	<font color="DodgerBlue" size="5" style="font-family: avenir">
+	<font color="Black" size="5" style="font-family: Arial, Helvetica, sans-serif;">
 		<body bgcolor="lightgrey">
 			<h1>SAVE SUCCESSFUL</h1><br>
 			<h2>Following Employee has been added to the database</h2><br>
 			<h2>{{ name }}</h2><br>
 			<title>Add Emp Output</title>
-				<form action="http://3.134.115.108:80/" autocomplete="on" method = "GET">
+				<form action="http://172.31.81.126:80/" autocomplete="on" method = "GET">
 
-					<button type="submit" style="background: grey; height: 45px; width: 200px; color:white; font:oblique;">GO BACK</button><br><br>
+					<button class= "button button1" type="submit">GO BACK</button><br><br>
 
 				</form>
 		</body>
