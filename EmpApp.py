@@ -49,7 +49,7 @@ def FetchData():
         cursor.close()
 
     print("all modification done...")
-    return render_template('GetEmpOutput.html')
+    return render_template('GetEmpOutput.html',results=results)
 
 @app.route("/addemp", methods=['POST'])
 def AddEmp():
