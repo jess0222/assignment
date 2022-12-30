@@ -43,7 +43,7 @@ def FetchData():
         return "Please insert ID"
     
     try:
-        cursor.execute(select_sql, ("001"))
+        cursor.execute(select_sql, (001))
         db_conn.commit()
         results = cursor.fetchall()
         
