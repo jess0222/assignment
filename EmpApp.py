@@ -33,6 +33,10 @@ def GetEmp():
 def about():
     return render_template('www.intellipaat.com')
 
+@app.route("/fetchdata", methods=['GET'])
+def FetchData():
+    do something
+    return render_template('GetEmpOutput.html')
 
 @app.route("/addemp", methods=['POST'])
 def AddEmp():
