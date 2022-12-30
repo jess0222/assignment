@@ -39,17 +39,14 @@ def FetchData():
     select_sql = "SELECT * FROM employee WHERE emp_id = (%s)"
     cursor = db_conn.cursor()
     
-    if emp_id == "":
-        return "Please insert ID"
+    if !(emp_id == ""):
+        return emp_id
     
     try:
-        cursor.execute(select_sql, (001))
+        cursor.execute(select_sql, (emp_id))
         db_conn.commit()
         results = cursor.fetchall()
-        
-    except Exception as e:
-        return str(e)
-        
+        print(emp_id)
     finally:
         cursor.close()
         
