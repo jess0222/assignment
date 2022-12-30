@@ -35,7 +35,13 @@ def about():
 
 @app.route("/fetchdata", methods=['GET'])
 def FetchData():
-    do something
+    emp_id = request.form['emp_id']
+    select_sql = "SELECT * FROM employee WHERE emp_id = (%s)"
+    cursor = db_conn.cursor()
+    try:
+        cursor.execute(select_sql, (emp_id))
+        
+    
     return render_template('GetEmpOutput.html')
 
 @app.route("/addemp", methods=['POST'])
