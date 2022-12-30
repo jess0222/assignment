@@ -41,13 +41,10 @@ def FetchData():
     
     if emp_id == "":
         return "Please Insert ID"
-    else:
-        return emp_id
     try:
         cursor.execute(select_sql, (emp_id))
         db_conn.commit()
-        results = cursor.fetchall()
-        print(emp_id)
+        results = cursor.fetchone()
     finally:
         cursor.close()
         
