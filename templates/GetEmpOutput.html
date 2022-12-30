@@ -32,18 +32,19 @@
 			<form>
 
 				<div>
-
-			  		Employee ID:<br> {{ id }} <br><br>
-
-			  		First Name:<br> {{ fname }} <br><br>
-
-			  		Last Name:<br> {{ lname }} <br><br>
-
-			  		Primary Interest:<br> {{ interest }} <br><br>
-
-			  		Location:<br> {{ location }} <br><br>
-
-			  		Image URL: <br> {{ image_url }} <br><br>
+					{% for result in results %}
+						Employee ID:<br> {{ result.id }} <br><br>
+						
+						First Name:<br> {{ result.fname }} <br><br>
+						
+						Last Name:<br> {{ result.lname }} <br><br>
+						
+						Primary Interest:<br> {{ result.interest }} <br><br>
+						
+						Location:<br> {{ result.location }} <br><br>
+						
+						Image URL: <br> {{ result.image_url }} <br><br>
+					{% endfor %}
 
 			  		<button class="button" type="submit" style="background: rgb(255, 0, 0); height: 45px; width: 200px; color:white; font:oblique;" formaction= "/getemp">RESET</button><br><br>
 
