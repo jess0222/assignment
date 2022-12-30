@@ -47,9 +47,6 @@ def FetchData():
         results = cursor.fetchall()
     finally:
         cursor.close()
-        
-    for result in results:
-      print(result)
 
     print("all modification done...")
     return render_template('GetEmpOutput.html')
