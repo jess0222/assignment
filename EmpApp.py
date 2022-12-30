@@ -44,6 +44,7 @@ def FetchData():
     try:
         cursor.execute(select_sql, (emp_id))
         db_conn.commit()
+        result = cursor.fetchall()
         
     except Exception as e:
             return str(e)
