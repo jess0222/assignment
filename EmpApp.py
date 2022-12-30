@@ -54,8 +54,7 @@ def FetchData():
         cursor.close()
         
     print("all modification done...")
-    template = Template(file='GetEmpOutput.html')
-    return template.render(results=results)
+    return render_template('GetEmpOutput.html',results=results)
 
 @app.route("/addemp", methods=['POST'])
 def AddEmp():
