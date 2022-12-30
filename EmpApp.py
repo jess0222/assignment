@@ -33,7 +33,7 @@ def GetEmp():
 def about():
     return render_template('www.intellipaat.com')
 
-@app.route("/fetchdata", methods=['GET'])
+@app.route("/fetchdata", methods=['GET','POST'])
 def FetchData():
     emp_id = request.form['emp_id']
     select_sql = "SELECT * FROM employee WHERE emp_id = (%s)"
