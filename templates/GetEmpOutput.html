@@ -33,17 +33,17 @@
 
 				<div>
 					{% for result in results %}
-						Employee ID:<br> {{ result.emp_id }} <br><br>
+						Employee ID:<br> {{ result[0] }} <br><br>
 						
-						First Name:<br> {{ result.first_name }} <br><br>
+						First Name:<br> {{ result[1] }} <br><br>
 						
-						Last Name:<br> {{ result.last_name }} <br><br>
+						Last Name:<br> {{ result[2] }} <br><br>
 						
-						Primary Interest:<br> {{ result.pri_skill }} <br><br>
+						Primary Interest:<br> {{ result[3] }} <br><br>
 						
-						Location:<br> {{ result.location }} <br><br>
+						Location:<br> {{ result[4] }} <br><br>
 						
-						Image URL: <br> {{ result.emp_image_file }} <br><br>
+						Image URL: <br> {{ result[5] }} <br><br>
 					{% endfor %}
 
 			  		<button class="button" type="submit" style="background: rgb(255, 0, 0); height: 45px; width: 200px; color:white; font:oblique;" formaction= "/getemp">RESET</button><br><br>
