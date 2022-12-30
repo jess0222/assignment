@@ -44,12 +44,15 @@ def FetchData():
     try:
         cursor.execute(select_sql, (emp_id))
         db_conn.commit()
-        results = cursor.fetchone()
+        results = cursor.fetchall()
     finally:
         cursor.close()
         
+    for result in results:
+      print(result)
+
     print("all modification done...")
-    return render_template('GetEmpOutput.html',results=results)
+    return render_template('GetEmpOutput.html')
 
 @app.route("/addemp", methods=['POST'])
 def AddEmp():
