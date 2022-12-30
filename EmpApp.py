@@ -38,10 +38,20 @@ def FetchData():
     emp_id = request.form['emp_id']
     select_sql = "SELECT * FROM employee WHERE emp_id = (%s)"
     cursor = db_conn.cursor()
+    if emp_id == "":
+        return "Please insert ID"
+    
     try:
         cursor.execute(select_sql, (emp_id))
+        db_conn.commit()
         
-    
+    except Exception as e:
+            return str(e)
+        
+    finally:
+        cursor.close()
+        
+    print("all modification done...")
     return render_template('GetEmpOutput.html')
 
 @app.route("/addemp", methods=['POST'])
